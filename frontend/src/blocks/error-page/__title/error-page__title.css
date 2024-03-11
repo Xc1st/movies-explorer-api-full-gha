@@ -1,0 +1,12 @@
+.error-page__title{
+    text-align: center;
+    font-size: 140px;
+    font-weight: 400;
+    margin: 0 0 5px 0;
+}
+@media screen and (max-width: 660px) {
+    .error-page__title {
+        font-size: 80px;
+        margin: 0 0 10px 0;
+    }
+}

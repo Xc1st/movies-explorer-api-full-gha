@@ -1,0 +1,32 @@
+.login__button {
+    font-weight: 400;
+    font-size: 14px;
+    border-radius: 3px;
+    background: #4285F4;
+    padding: 13.5px 0;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all .3s;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.login__button:hover {
+    opacity: 0.8;
+}
+
+.login__button:active {
+    color: #202020;
+    background: #3DDC84;
+    transform: scale(1.2);
+    opacity: 0.8;
+    transform: translateY(.1rem);
+}
+
+@media screen and (max-width: 600px) {
+    .login__button {
+        font-weight: 400;
+        font-size: 12px;
+    }
+}

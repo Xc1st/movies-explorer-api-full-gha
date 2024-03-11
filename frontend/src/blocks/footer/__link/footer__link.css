@@ -1,0 +1,10 @@
+.footer__link{
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+@media screen and (max-width: 660px) {
+    .footer__link {
+        font-size: 12px
+    }
+}

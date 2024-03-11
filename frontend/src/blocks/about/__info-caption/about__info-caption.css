@@ -1,0 +1,25 @@
+.about__info-caption {
+    display: flex;
+    max-width: 550px;
+    min-height: 40px;
+    margin: 0 0 110px 0;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .about__info-caption {
+        margin: 0 0 93px 0;
+        
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .about__info-caption {
+        margin: 0;
+        font-size: 11px;
+        line-height: 145%;
+    }
+}

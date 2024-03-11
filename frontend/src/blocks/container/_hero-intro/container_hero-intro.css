@@ -1,0 +1,20 @@
+.container_hero-intro {
+    justify-content: space-between;
+    display: flex;
+    gap: 15%;
+    padding: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    .container_hero-intro {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 48px;
+    }
+}
+@media screen and (max-width: 660px) {
+    .container_hero-intro {
+        gap: 44px;
+    }
+}

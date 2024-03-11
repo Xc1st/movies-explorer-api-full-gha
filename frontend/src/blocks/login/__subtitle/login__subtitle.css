@@ -1,0 +1,11 @@
+.login__subtitle{
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0 0 40px 0;
+}
+@media screen and (max-width: 600px) {
+    .login__subtitle {
+        align-self: center;
+        margin-bottom: 80px;
+    }
+}

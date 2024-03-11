@@ -1,0 +1,16 @@
+.search-string__shorts-subtitle {
+    align-self: start;
+    display: inline;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 138%;
+    color: #fff;
+    margin: 0;
+}
+
+@media screen and (max-width: 750px) {
+    .search-string__shorts-subtitle {
+        font-size: 11px;
+        line-height: 164%;
+    }
+}

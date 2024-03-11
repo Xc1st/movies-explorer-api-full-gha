@@ -1,0 +1,20 @@
+.search-string__shorts-button{
+background-image: url(../../../images/smalltumboff.png);
+background-color: transparent;
+border: none;
+width: 36px;
+height: 20px;
+padding: 0;
+transition: all .3s;
+margin: 0 14px 117px 0;
+}
+@media screen and (max-width: 1000px) {
+    .search-string__shorts-button {
+        margin: 0 0 130px 16px;
+    }
+}
+@media screen and (max-width: 750px) {
+    .search-string__shorts-button {
+        margin: 0 0 90px 13px;
+    }
+}

@@ -1,0 +1,7 @@
+.header__button-container{
+    display: flex;
+    justify-content: right;
+    grid-area: buttons;
+    align-items: center;
+    position: relative;
+}

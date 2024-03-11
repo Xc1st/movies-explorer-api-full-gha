@@ -1,0 +1,10 @@
+.about__timelearn{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    text-align: center;
+}
+@media screen and (max-width: 660px) {
+    .about__timelearn {
+        grid-template-columns: 1fr 2fr
+    }
+}

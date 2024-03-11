@@ -1,0 +1,20 @@
+.profile__submit{
+    border-radius: 3px;
+    background: #4285F4;
+    padding: 15px 0;
+    border:none;
+    color: white;
+    cursor: pointer;
+    transition: all .4s;
+    box-sizing:border-box;
+    width: 100%;
+    transition: all .3s;
+}
+
+@media screen and (max-width: 665px) {
+    .profile__submit {
+        font-weight: 400;
+        font-size: 12px;
+        max-width: 260px;
+    }
+}

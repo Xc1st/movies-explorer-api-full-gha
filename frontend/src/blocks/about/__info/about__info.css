@@ -1,0 +1,16 @@
+.about__info {
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (max-width: 660px) {
+    .about__info {
+        margin: 0 0 56px 0;
+        
+    }
+}
+@media screen and (max-width: 660px) {
+    .about__info:last-of-type {
+        margin: 0 0 60px 0;
+        
+    }
+}

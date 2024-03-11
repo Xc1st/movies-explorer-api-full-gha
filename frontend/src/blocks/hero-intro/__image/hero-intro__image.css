@@ -1,0 +1,11 @@
+.hero-intro__image {
+    max-width: 310px;
+    max-height: 304px;
+}
+
+@media screen and (max-width: 660px) {
+    .hero-intro__image {
+        max-width: 210px;
+        max-height: 206px;
+    }
+}

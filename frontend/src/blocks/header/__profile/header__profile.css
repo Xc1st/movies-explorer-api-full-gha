@@ -1,0 +1,9 @@
+.header__profile{
+    line-height: 92%;
+    font-weight: 500;
+    display: inline-block;
+    margin: 0 7px 0 0;
+    min-height: 13px;
+    max-width: 53px;
+    padding: 0 0 0 11px;
+}

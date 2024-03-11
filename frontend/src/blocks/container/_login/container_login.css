@@ -1,0 +1,15 @@
+.container_login {
+    flex-direction: column;
+    justify-content: start;
+    padding: 70px 0 0 0;
+}
+@media screen and (max-width: 768px) {
+    .container_login {
+        padding: 232px 0 0 0;
+    }
+}
+@media screen and (max-width: 600px) {
+    .container_login {
+        padding: 56px 0 0 0;
+    }
+}

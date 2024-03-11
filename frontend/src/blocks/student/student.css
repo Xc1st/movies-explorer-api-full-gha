@@ -1,0 +1,17 @@
+.student{
+    background: #202020;
+    display: flex;
+    justify-content: center;
+    padding: 110px 70px 125px;
+    color: white;
+}
+@media screen and (max-width: 1000px) {
+    .student {
+        padding: 90px 50px;
+    }
+}
+@media screen and (max-width: 660px) {
+    .student {
+        padding: 70px 14px;
+    }
+}

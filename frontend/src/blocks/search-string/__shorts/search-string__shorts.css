@@ -1,0 +1,15 @@
+.search-string__shorts{
+    display: flex;
+    align-items: center;
+}
+@media screen and (max-width: 1000px) {
+    .search-string__shorts {
+        flex-direction: row-reverse;
+    }
+}
+@media screen and (max-width: 750px) {
+    .search-string__shorts {
+        flex-direction: row-reverse;
+        justify-content:center;
+    }
+}

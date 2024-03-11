@@ -1,0 +1,7 @@
+.login__error_button{
+    margin-bottom: 5px;
+}
+
+.login__error_button:last-of-type{
+    margin-bottom: 5px;
+}

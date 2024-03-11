@@ -1,0 +1,22 @@
+.student__portfolio-link-text {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: -1.2px;
+}
+
+@media screen and (max-width: 1000px) {
+    .student__portfolio-link-text {
+        font-size: 28px;
+        line-height: 179%;
+    }
+}
+@media screen and (max-width: 660px) {
+    .student__portfolio-link-text {
+        font-size: 18px;
+        line-height: 156%;
+    }
+}

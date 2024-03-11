@@ -1,0 +1,29 @@
+.backline-menu{
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 67.7vw;
+    background:#202020;
+    top:0;
+    right: 0;
+    z-index: 9;
+    padding: 159px 0 0 0;
+    transition: all .5s;
+}
+.backline-menu::after{
+    z-index: 0;
+    top: 0;
+    left: -100%;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    background: #000;
+}
+@media screen and (max-width:500px) {
+    .backline-menu {
+        padding: 144px 0 0 0;
+        width: 100%;
+    }
+}

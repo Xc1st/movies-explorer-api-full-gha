@@ -1,0 +1,13 @@
+.technology__lists{
+    display: flex;
+    padding: 0;
+    list-style: none;
+    gap: 10px;
+    margin: 0;
+}
+@media screen and (max-width: 660px) {
+    .technology__lists {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+    }
+}

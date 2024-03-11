@@ -1,0 +1,9 @@
+.search-string__shorts-subtitle {
+    align-self: start;
+    display: inline;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 138%;
+    color: #fff;
+    margin: 0;
+}

@@ -1,0 +1,28 @@
+.technology__list{
+    border-radius: 10px;
+    background: #303030;
+    width: 90px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.56px;
+    opacity: 1;
+}
+.technology__list:hover{
+    transition: opacity all 1s;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.15);
+    opacity: 0.9;
+    transform: translateY(-3%);
+}
+@media screen and (max-width:970px){
+    .technology__list{
+        width: 84px;
+        height: 57px;
+        font-size: 12px;
+    }
+}
+

@@ -1,0 +1,11 @@
+.student__info-img {
+    border-radius: 10px;
+    height: 327px;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 660px) {
+    .student__info-img {
+        margin-bottom: 40px;
+    }
+}

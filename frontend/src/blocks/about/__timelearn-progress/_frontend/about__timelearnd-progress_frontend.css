@@ -1,0 +1,10 @@
+.about__timelearn-progress_frontend{
+    background: #303030;
+    padding: 10px 0;
+}
+@media screen and (max-width: 660px) {
+    .about__timelearn-progress_frontend {
+        font-size: 11px;
+        padding: 11px 0;
+    }
+}

@@ -1,0 +1,23 @@
+.about__info-title {
+    display: inline-block;
+    max-width: max-content;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.8px;
+    margin: 0 0 26px 0;
+    min-height: 24px;
+}
+
+@media screen and (max-width: 1000px) {
+    .about__info-title {
+        margin: 0 0 22px 0;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .about__info-title {
+        margin: 0 0 16px 0;
+        font-size: 18px;
+        letter-spacing: -0.04em;
+    }
+}

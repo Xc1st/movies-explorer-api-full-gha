@@ -1,0 +1,20 @@
+.student__profession{
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0 0 26px 0;
+}
+@media screen and (max-width: 1000px) {
+    .student__profession {
+        font-size: 12px;
+        line-height: 150%;
+        margin: 0 0 20px 0;
+    }
+}
+@media screen and (max-width: 660px) {
+    .student__profession {
+        font-size: 11px;
+        line-height: 145%;
+    }
+}

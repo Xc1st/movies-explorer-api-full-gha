@@ -1,0 +1,10 @@
+.profile__exit{
+    font-size: 13px;
+    text-decoration: none;
+    color: #ee3465;
+    background: transparent;
+    position: relative;
+    border: none;
+    text-align: center;
+    padding: 0;
+}

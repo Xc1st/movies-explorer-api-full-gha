@@ -1,0 +1,23 @@
+.profile__input {
+    padding: 0;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    width: 80%;
+    text-align: end;
+    opacity: 1;
+}
+.profile__input:hover {
+    transition: all .25s;
+    opacity: 0.8;
+    transform: scale(1.03);
+}
+
+.profile__input:active {
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+.profile__input::placeholder {
+    font-size: 11px;
+}

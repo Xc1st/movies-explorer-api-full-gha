@@ -1,0 +1,7 @@
+.login__caption{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 16px;
+}

@@ -1,0 +1,5 @@
+.profile__error{
+    display: block;
+    grid-area: error;
+    height: 12px;
+}

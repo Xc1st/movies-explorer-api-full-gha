@@ -1,0 +1,7 @@
+.container_header{
+    width: 100%;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    grid-template-areas: "logo films buttons";
+}

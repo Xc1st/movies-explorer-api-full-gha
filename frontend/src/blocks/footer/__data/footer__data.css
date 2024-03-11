@@ -1,0 +1,8 @@
+.footer__data{
+    margin: 0 0 20px 0;
+}
+@media screen and (max-width: 660px) {
+    .footer__data {
+        font-size: 12px
+    }
+}

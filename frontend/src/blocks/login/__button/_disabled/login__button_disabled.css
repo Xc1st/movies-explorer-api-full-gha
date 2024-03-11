@@ -1,0 +1,11 @@
+.login__button_disabled{
+    background: grey;
+    opacity: 0.8;
+    color: black;
+}
+
+.login__button_disabled:hover{
+    transition: none;
+    transform: none;
+    cursor: default;
+}

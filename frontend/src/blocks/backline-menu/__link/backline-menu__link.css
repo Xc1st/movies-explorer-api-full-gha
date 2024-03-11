@@ -1,0 +1,44 @@
+.backline-menu__link{
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 28px;
+    position: relative;
+    max-width: max-content;
+    transition: all .4s;
+}
+
+.backline-menu__link:last-of-type{
+    margin-bottom: 57.2vh;
+}
+@media screen and (max-width:500px) {
+    .backline-menu__link:last-of-type {
+        margin-bottom: 444px;
+    }
+}
+
+.backline-menu__link::after{
+    content: '';
+    width: 3%;
+    height: 2px;
+    background-color:#fff;
+    opacity: 0;
+    z-index: 15;
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    transition: all .6s;
+    border-radius: 3px;
+}
+
+.backline-menu__link:hover::after{
+    content: '';
+    width: 100%;
+    opacity: 1;
+    left: 0;
+}
+
+.backline-menu__link:hover{
+    opacity: 0.7;
+}

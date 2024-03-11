@@ -1,0 +1,5 @@
+.container_technology{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}

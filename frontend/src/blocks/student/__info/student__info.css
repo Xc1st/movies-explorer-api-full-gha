@@ -1,0 +1,18 @@
+.student__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+@media screen and (max-width: 1000px) {
+    .student__info {
+        margin-bottom: 90px;
+    }
+}
+@media screen and (max-width: 660px) {
+    .student__info {
+        margin-bottom: 70px;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+}

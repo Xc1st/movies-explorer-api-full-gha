@@ -1,0 +1,10 @@
+.about__timelearn-progress {
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0 0 14px 0;
+}
+@media screen and (max-width: 660px) {
+    .about__timelearn-progress{
+        margin: 0 0 10px 0;
+    }
+}

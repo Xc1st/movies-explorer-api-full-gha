@@ -1,0 +1,15 @@
+.search-string__input {
+    border: none;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 28px;
+    padding: 0;
+    color: #fff;
+    width: 100%;
+}
+
+@media screen and (max-width: 750px) {
+    .search-string__input {
+        font-size: 18px;
+    }
+}

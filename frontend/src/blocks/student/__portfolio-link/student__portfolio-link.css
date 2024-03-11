@@ -1,0 +1,21 @@
+.student__portfolio-link{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 19px;
+    border-bottom: 1px solid #424242;
+    padding-bottom: 19px;
+}
+
+.student__portfolio-link:last-of-type{
+    margin: 0;
+    border: none;
+}
+@media screen and (max-width: 550px) {
+    .student__portfolio-link {
+        font-size: 18px;
+        line-height: 156%;
+    }
+}

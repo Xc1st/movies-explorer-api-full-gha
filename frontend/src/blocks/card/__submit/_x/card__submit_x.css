@@ -1,0 +1,6 @@
+.card__submit_x{
+    border: none;
+    background: transparent;
+    transform: rotate(45deg);
+    color: white
+}

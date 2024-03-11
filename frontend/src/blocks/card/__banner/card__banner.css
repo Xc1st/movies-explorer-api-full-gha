@@ -1,0 +1,5 @@
+.card__banner{
+    padding: 14px 12px;
+    display: flex;
+    justify-content: space-between;
+}

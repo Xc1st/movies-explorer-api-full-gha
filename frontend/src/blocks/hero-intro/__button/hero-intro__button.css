@@ -1,0 +1,14 @@
+.hero-intro__button {
+    grid-area: button;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, .6);
+    background-color: transparent;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    padding: 10px 20px;
+    display: inline-block;
+    text-decoration: none;
+}

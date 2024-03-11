@@ -1,0 +1,13 @@
+.footer__caption{
+    display: flex;
+    color: #FFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 13px;
+    font-weight: 400;
+    justify-content: space-between;
+}
+@media screen and (max-width: 660px){
+    .footer__caption{
+        flex-direction: column-reverse;
+    }
+}

@@ -1,0 +1,7 @@
+.header__button_type_signin {
+    background-color: #2BE080;
+    padding: 8px 20px;
+    border-radius: 3px;
+    flex-shrink: 0;
+    color: black;
+}

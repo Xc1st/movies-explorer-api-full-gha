@@ -1,0 +1,13 @@
+.search-string__button{
+    background-color: #4285f4;
+    border: none;
+    border-radius: 50px;
+    padding: 0;
+    min-width: 34px;
+    min-height: 34px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.search-string__button:hover{
+    transform: scale(1.1);
+}

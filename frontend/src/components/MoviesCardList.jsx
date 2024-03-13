@@ -13,6 +13,7 @@ import {
     StepSmallScreen
 } from "../utils/constants"
 import MoviesCard from "./MoviesCard";
+import Preloader from "./Preloader/Preloader";
 
 export default function MoviesCardList({ movies, onDelete, addMovie, savedMovies, isLoading, serverError, firstEntrance }) {
     const location = useLocation();
@@ -65,7 +66,8 @@ export default function MoviesCardList({ movies, onDelete, addMovie, savedMovies
     return (
         <>
         <ul className="search-films__cards">
-            {(location.pathname === '/movies' && card.length !== 0) ?
+        {isLoading ? <Preloader/> :
+            (location.pathname === '/movies' && card.length !== 0) ?
                 card.map(data => {
                     return (
                         <MoviesCard
@@ -78,7 +80,7 @@ export default function MoviesCardList({ movies, onDelete, addMovie, savedMovies
                 })
                 :
                 movies.length !== 0 ?
-                    movies.map(data => {
+                movies.map(data => {
                         return (
                             <MoviesCard
                                 key={data.id}

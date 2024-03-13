@@ -3,9 +3,10 @@
     color: #fff;
     background-color: transparent;
     border: none;
-    width: 80%;
+    width: 100%;
     text-align: end;
     opacity: 1;
+    grid-area: input;
 }
 .profile__input:hover {
     transition: all .25s;

@@ -10,7 +10,6 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const { limiter, DB_ADDRESS } = require('./config');
 
 const { PORT = 3000 } = process.env;
-
 const app = express();
 
 app.use(cors());

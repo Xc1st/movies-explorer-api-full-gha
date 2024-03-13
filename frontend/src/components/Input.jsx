@@ -28,7 +28,6 @@ export default function Input({ name, isInputValid, error, placeholder, minLengt
                     <span className="login__error error">{error}</span>
                 </>
             }
-            :
             {location.pathname === '/signup' &&
                 <>
                     <p className="login__input-caption">{name === 'email' ? 'E-mail' : name === 'password' ? 'Пароль' : 'Имя'}</p>
@@ -91,6 +90,7 @@ export default function Input({ name, isInputValid, error, placeholder, minLengt
                         placeholder="Фильм"
                         pattern={pattern}
                         onChange={onChange}
+                        disabled={disabled}
                     />
                 </>
             }

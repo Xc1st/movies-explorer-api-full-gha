@@ -8,7 +8,7 @@ class MainApi {
 
     _request(url, config) {
         return fetch(`${this._url}${url}`, config)
-        .then(this._checkResponse)
+            .then(this._checkResponse)
     }
 
     registration(username, email, password) {
@@ -81,9 +81,9 @@ class MainApi {
                 duration: data.duration,
                 description: data.description,
                 year: data.year,
-                image: `https://api.xc1st.nomoredomainsmonster.ru${data.image.url}`,
+                image: `https://api.nomoreparties.co${data.image.url}`,
                 trailerLink: data.trailerLink,
-                thumbnail: `https://api.xc1st.nomoredomainsmonster.ru${data.image.formats.thumbnail.url}`,
+                thumbnail: `https://api.nomoreparties.co${data.image.formats.thumbnail.url}`,
                 movieId: data.id,
                 nameRU: data.nameRU,
                 nameEN: data.nameEN
@@ -102,6 +102,6 @@ class MainApi {
 }
 
 const mainApi = new MainApi({
-    baseUrl: 'https://localhost:3000'
+    baseUrl: 'http://localhost:3000'
 })
 export default mainApi

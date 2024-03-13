@@ -1,0 +1,5 @@
+.search-string__error{
+    display: inline-block;
+    margin: 0 14px 20px;
+    opacity: 0;
+}

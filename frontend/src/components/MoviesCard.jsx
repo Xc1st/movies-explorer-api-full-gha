@@ -1,4 +1,3 @@
-import image from "../images/pic__COLOR_pic.png"
 import { useLocation, Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 
@@ -8,10 +7,10 @@ export default function MoviesCard({ onDelete, addMovie, data, savedMovies }) {
 
     useEffect(() => {
         if (location.pathname === '/movies')
-            setIsLoved(savedMovies.some(element => data.id === element.movieId))
-    }, [savedMovies, data.id, setIsLoved, setClick, pathname])
+        setIsLoved(savedMovies.some(element => data.id === element.movieId))
+    }, [savedMovies, data.id, setIsLoved, location.pathname])
 
-    function cardLike(e) {
+    function cardLike() {
         if (savedMovies.some(e => data.id === e.movieId)) {
             setIsLoved(true)
             addMovie(data)
@@ -20,6 +19,7 @@ export default function MoviesCard({ onDelete, addMovie, data, savedMovies }) {
             addMovie(data)
         }
     }
+
     function convertTime(duration) {
         const minutes = duration % 60;
         const hours = Math.floor(duration / 60);
@@ -36,10 +36,10 @@ export default function MoviesCard({ onDelete, addMovie, data, savedMovies }) {
                     <p className="card__time">{convertTime(data.duration)}</p>
                 </div>
                 {location.pathname === '/movies' ?
-                    <button type="button" className={`card__submit ${loved ? 'card__submit_active' : ''}`} onClick= {cardLike}></button>
+                    <button type="button" className={`card__submit ${loved ? 'card__submit_active' : ''}`} onClick={cardLike}></button>
                     :
                     <button type="button" className={`card__submit card__submit_x`} onClick={() => onDelete(data._id)}>+</button>
-    }
+                }
             </div>
         </li>
     )

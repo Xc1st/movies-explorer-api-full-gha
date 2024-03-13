@@ -11,7 +11,7 @@ router.post('/', celebrate({
   body: Joi.object().keys({
     country: Joi.string().required(),
     director: Joi.string().required(),
-    duration: Joi.string().required(),
+    duration: Joi.number().required(),
     description: Joi.string().required(),
     year: Joi.string().required(),
     image: Joi.string().required().pattern(urlRegex),

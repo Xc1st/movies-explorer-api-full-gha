@@ -1,13 +1,8 @@
 .container_profile{
     flex-direction: column;
     min-width: 410px;
-    padding: 74px 0 0;
 }
-@media screen and (max-width: 768px) {
-    .container_profile {
-        padding: 236px 0 0;
-    }
-}
+
 @media screen and (max-width: 550px) {
     .container_profile {
         min-width: 260px;

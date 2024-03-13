@@ -1,23 +1,28 @@
 .profile__input-cont {
     border-bottom: 1px solid #424242;
-    width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-areas: "name input" 
+    "error .";
     justify-content: space-between;
-    padding-bottom: 16px;
+    padding-bottom: 4px;
+    width: 410px
 }
 .profile__input-cont:last-of-type{
     border: none;
-    margin-bottom: 220px;
+    margin-bottom: 212px;
     padding: 16px 0 0 0;
 }
 @media screen and (max-width: 768px) {
     .profile__input-cont:last-of-type {
-        margin-bottom: 210px;
+        margin-bottom: 198px;
     }
 }
 @media screen and (max-width: 550px) {
     .profile__input-cont:last-of-type {
+        margin-bottom: 47vh;
         padding: 16px 0 0 0;
-        margin-bottom: 379px;
+    }
+    .profile__input-cont{
+        width: 260px;
     }
 }

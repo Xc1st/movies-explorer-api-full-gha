@@ -7,18 +7,18 @@ import Icon from "../images/text__COLOR_invisible.png"
 import FilterButton from "./FilterButton"
 
 export default function SearchForm({ isCheck, searchedMovie, searchMovies, setIsError, firstEntrance, savedMovie, movies, filter, setIsCheck }) {
-    const location = useLocation()
+    const { pathname } = useLocation()
     const isError = useContext(ErrorContext)
     const { values, handleChange, reset } = useFormValidation()
 
     useEffect(() => {
-        if ((location.pathname === '/saved-movies' && savedMovie.length === 0)) {
+        if ((pathname === '/saved-movies' && savedMovie.length === 0)) {
             reset({ search: '' })
         } else {
             reset({ search: searchedMovie })
         }
         setIsError(false)
-    }, [searchedMovie, reset, setIsError, location.pathname, savedMovie])
+    }, [searchedMovie, reset, setIsError, pathname, savedMovie])
 
     function onSubmit(evt) {
         evt.preventDefault()
@@ -44,21 +44,20 @@ export default function SearchForm({ isCheck, searchedMovie, searchMovies, setIs
         <div className="search-films__search-string search-string" >
             <form className="search-string__box" onSubmit={onSubmit} noValidate>
                 <Input
-                    name={'search-string'}
+                    name={'search'}
                     value={values.search}
                     onChange={(e) => {
                         handleChange(e)
                         setIsError(false)
                     }}
                     required
-                    type={'text'} />
-                <button type="submit" className={`search-string__button${savedMovie ? (location.pathname === '/saved-movies' && savedMovie.length === 0) && 'search-string__button_disabled' : ''}`}><img src={Icon} alt="" /></button>
+                    type={'text'}
+                    disabled={savedMovie ? (savedMovie.length === 0 && true) : false} />
+
+                <button type="submit" className={`search-string__button ${savedMovie ? (location.pathname === '/saved-movies' && savedMovie.length === 0) && 'search-string__button_disabled' : ''}`}><img src={Icon} alt="" /></button>
             </form>
+            <span className={`search-string__error error ${isError && 'search-string__error_active'}`}>{'Введите ключевое слово'}</span>
             <FilterButton changeShort={changeShort} firstEntrance={firstEntrance} isCheck={isCheck} />
-            {/* <div className="search-string__shorts">
-                <button className="search-string__shorts-button" onClick={black}></button>
-                <p className="search-string__shorts-subtitle">Короткометражки</p>
-            </div> */}
         </div>
     )
 }

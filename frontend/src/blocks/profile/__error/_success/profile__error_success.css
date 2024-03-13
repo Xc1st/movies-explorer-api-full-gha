@@ -1,0 +1,14 @@
+@keyframes disappearing {
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.profile__error_success{
+    margin: 0 0 20px 0;
+    color: #3DDC84;
+    animation: disappearing  2s;
+}

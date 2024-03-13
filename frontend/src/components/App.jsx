@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useCallback, useEffect, useState } from 'react'
-import { Route, Routes, Link, useNavigate, Navigate } from 'react-router-dom'
+import { Route, Routes, useNavigate, Navigate, } from 'react-router-dom';
 import MainPage from './MainPage'
 import Registration from './Registration'
 import Login from './Login'
@@ -12,10 +12,12 @@ import mainApi from '../utils/MainApi'
 import CurrentUserContext from '../contexts/CurrentUserContext';
 import SendContext from '../contexts/SendContext';
 import ErrorContext from '../contexts/ErrorContext';
+import SavedMovies from './SavedMovies';
+import Preloader from './Preloader/Preloader';
 
 function App() {
   const navigate = useNavigate()
-  const [loggedIn, setLoggedIn] = useState(true)
+  const [loggedIn, setLoggedIn] = useState(false)
   const [isSend, setIsSend] = useState(false)
   const [currentUser, setCurrentUser] = useState({})
   const [savedMovies, setSavedMovies] = useState([])
@@ -113,7 +115,7 @@ function App() {
       .finally(() => setIsSend(false))
   }
   function handleDeleteMovie(deletemovieId) {
-    mainApi.deleteMovie(deletemovieId, localStorage.jwt)
+    mainApi.deleteMovies(deletemovieId, localStorage.jwt)
       .then(() => {
         setSavedMovies(savedMovies.filter(movie => { return movie._id !== deletemovieId }))
       })
@@ -122,11 +124,11 @@ function App() {
 
   function handleToggleMovie(data) {
     const isAdd = savedMovies.some(element => data.id === element.movieId)
-    const seachClickMovie = savedMovies.filter((movie) => {
+    const searchClickMovie = savedMovies.filter((movie) => {
       return movie.movieId === data.id
     })
     if (isAdd) {
-      handleDeleteMovie(seachClickMovie[0]._id)
+      handleDeleteMovie(searchClickMovie[0]._id)
     } else {
       mainApi.addMovie(data, localStorage.jwt)
         .then(res => {
@@ -135,69 +137,71 @@ function App() {
         .catch((e) => console.error(`Ошибка при установке лайка ${e}`))
     }
   }
+  
 
   return (
     <div className="page">
-      <CurrentUserContext.Provider value={currentUser}>
-        <SendContext.Provider value={isSend}>
-          <ErrorContext.Provider value={isError}>
-            <Routes>
-              <Route
-                path='/'
-                element={<MainPage
-                  loggedIn={loggedIn} />} />
-              <Route
-                path='/signup'
-                element={
-                  loggedIn ? <Navigate to='/movies' replace /> :
-                    <Registration
-                      name={'signup'} onSignUp={handleRegister} setIsError={setIsError} />} />
-              <Route
-                path='/signin'
-                element={
-                  loggedIn ? <Navigate to='/movies' replace /> :
-                    <Login name={'signin'} setIsError={setIsError} onSignIn={handleLogin} />} />
-              <Route
-                path='/profile'
-                element={
-                  <ProtectedRoute
-                    element={Profile}
-                    loggedIn={loggedIn}
-                    exit={logOut}
-                    editUserData={editUserData}
-                    isSuccess={isSuccess}
-                    setIsError={setIsError}
-                    setIsSuccess={setSuccess}
-                    setIsEdit={setIsEdit}
-                    isEdit={isEdit} />
-                } />
-              <Route
-                path='/movies'
-                element={
-                  <ProtectedRoute
-                    element={SearchFilms}
-                    savedMovies={savedMovies}
-                    onDelete={handleDeleteMovie}
-                    addMovie={handleToggleMovie}
-                    loggedIn={loggedIn}
-                    setIsError={setIsError} />} />
-              <Route
-                path='/saved-movies'
-                element={
-                  <ProtectedRoute
-                    element={SearchFilms}
-                    savedMovies={savedMovies}
-                    onDelete={handleDeleteMovie}
-                    addMovie={handleToggleMovie}
-                    loggedIn={loggedIn}
-                    setIsError={setIsError}
-                  />} />
+      {isCheckToken ? <Preloader /> :
+        <CurrentUserContext.Provider value={currentUser}>
+          <SendContext.Provider value={isSend}>
+            <ErrorContext.Provider value={isError}>
+              <Routes>
+                <Route
+                  path='/'
+                  element={<MainPage
+                    loggedIn={loggedIn} />} />
+                <Route
+                  path='/signup'
+                  element={
+                    loggedIn ? <Navigate to='/movies' replace /> :
+                      <Registration
+                        name={'signup'} onSignUp={handleRegister} setIsError={setIsError} />} />
+                <Route
+                  path='/signin'
+                  element={
+                    loggedIn ? <Navigate to='/movies' replace /> :
+                      <Login name={'signin'} setIsError={setIsError} onSignIn={handleLogin} />} />
+                <Route
+                  path='/profile'
+                  element={
+                    <ProtectedRoute
+                      element={Profile}
+                      loggedIn={loggedIn}
+                      logOut={logOut}
+                      editUserData={editUserData}
+                      setIsError={setIsError}
+                      setIsSuccess={setSuccess}
+                      isSuccess={isSuccess}
+                      setIsEdit={setIsEdit}
+                      isEdit={isEdit} />
+                  } />
+                <Route
+                  path='/movies'
+                  element={
+                    <ProtectedRoute
+                      element={SearchFilms}
+                      savedMovies={savedMovies}
+                      onDelete={handleDeleteMovie}
+                      addMovie={handleToggleMovie}
+                      loggedIn={loggedIn}
+                      setIsError={setIsError} />} />
+                <Route
+                  path='/saved-movies'
+                  element={
+                    <ProtectedRoute
+                      element={SavedMovies}
+                      savedMovies={savedMovies}
+                      onDelete={handleDeleteMovie}
+                      loggedIn={loggedIn}
+                      setIsError={setIsError}
+                    />} />
 
-              <Route path="*" element={<NFEPage />} />
-            </Routes>
-          </ErrorContext.Provider>
-        </SendContext.Provider>
-      </CurrentUserContext.Provider>
+                <Route path="*" element={<NFEPage />} />
+              </Routes>
+            </ErrorContext.Provider>
+          </SendContext.Provider>
+        </CurrentUserContext.Provider>
+      }
     </div >
   )
 }

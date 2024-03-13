@@ -59,7 +59,6 @@ export default function SearchFilms({ setIsError, addMovie, savedMovies, loggedI
             filter(search, isCheck, movies)
         }
     }, [filter])
-
     return (
         <>
             <Header

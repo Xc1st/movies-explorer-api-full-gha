@@ -1,0 +1,20 @@
+.profile__submit_disabled{
+    background: grey;
+    opacity: 0.8;
+    color: black;
+}
+
+.profile__submit_disabled:hover{
+    transition: none;
+    transform: none;
+    cursor: default;
+}
+
+.profile__submit_disabled::after{
+    content: '';
+    display: none;
+}
+
+.profile__submit_disabled:active{
+    background: grey
+}

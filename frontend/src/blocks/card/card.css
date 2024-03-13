@@ -1,5 +1,11 @@
 .card {
+    max-width: max-content;
     border-radius: 10px;
     fill: #222;
     box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.05);
+}
+@media screen and (max-width:750px){
+    .card{
+        max-width: 300px;
+    }
 }

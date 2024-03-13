@@ -2,6 +2,7 @@
 import EntryPage from './EntryPage';
 import Input from './Input';
 import useFormValidation from '../hooks/useFormValidation'
+
 export default function Registration({ name, onSignUp, setIsError }) {
     const { values, errors, isInputValid, isValid, handleChange } = useFormValidation()
 
@@ -16,7 +17,7 @@ export default function Registration({ name, onSignUp, setIsError }) {
                 maxLength={30}
                 required
                 type={'text'}
-                name={'name'}
+                name={'username'}
                 placeholder={'Введите имя'}
                 value={values.username}
                 isInputValid={isInputValid.username}
@@ -27,13 +28,13 @@ export default function Registration({ name, onSignUp, setIsError }) {
                 }}
             ></Input>
             <Input
-                type={'E-mail'}
+                type={'email'}
                 required
                 name={'email'}
                 placeholder={'Ведите Email'}
-                value={values.username}
-                isInputValid={isInputValid.username}
-                error={errors.username}
+                value={values.email}
+                isInputValid={isInputValid.email}
+                error={errors.email}
                 onChange={(e) => {
                     handleChange(e)
                     setIsError(false)

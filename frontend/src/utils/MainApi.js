@@ -102,6 +102,6 @@ class MainApi {
 }
 
 const mainApi = new MainApi({
-    baseUrl: 'http://localhost:3000'
+    baseUrl: 'https://xc1st.nomoredomainswork.ru'
 })
 export default mainApi
